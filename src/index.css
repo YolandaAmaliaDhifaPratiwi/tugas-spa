@@ -198,21 +198,23 @@ body {
 
 /* ... */
 /* ============================
-   LAPTOP / DESKTOP ADJUSTMENTS (FINAL FIX)
+   LAPTOP / DESKTOP ADJUSTMENTS
+=========================== */
+/* ============================
+   LAPTOP / DESKTOP ADJUSTMENTS
 =========================== */
 @media (min-width: 1024px) {
   .profile-nav-global {
-    /* PENTING: Pertahankan FIXED, tapi atur posisi kanan agar sejajar dengan container */
-    position: fixed;
-    top: 20px; /* Tetap di atas */
-    
-     /* Hitung jarak dari kanan agar sejajar dengan tepi kanan container (1100px) */
-     /* 50% = tengah layar. 550px = setengah lebar container. 20px = padding body */
-    right: calc(50% - 550px + 20px); 
-    left: unset; /* Pastikan left tidak bentrok */
-    
-    /* Hapus margin-left: auto yang hanya berfungsi untuk position: static/relative */
-    margin-left: unset;
+    /* Hapus properti 'fixed' agar elemen berada di dalam 'profile-header' */
+    position: static; 
+    
+    /* Nonaktifkan semua posisi yang terkait dengan fixed */
+    top: unset;
+    right: unset;
+    left: unset;
+    
+    /* Atur agar navigasi muncul di sebelah kanan */
+    margin-left: auto; /* Menggeser grup tombol ke kanan */
   }
 }
 /* ============================
@@ -365,6 +367,3 @@ body {
   box-shadow: 0 0 15px var(--glow);
   transform: translateY(-3px);
 }
-
-
-

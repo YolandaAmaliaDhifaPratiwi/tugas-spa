@@ -8,27 +8,23 @@ export default function Profile({ profile, contact, onNavigate, refs }) {
     <section id="profile" className="profile-wrapper glow">
 
       {/* =========================
-          MINI NAVIGATION DI ATAS
+          MINI NAVIGATION DI KANAN ATAS
       ============================ */}
-      <div className="profile-nav-top">
+      <div className="profile-nav-global">
         <button onClick={() => onNavigate(refs.profileRef)}>Profile</button>
         <button onClick={() => onNavigate(refs.skillsRef)}>Skills</button>
         <button onClick={() => onNavigate(refs.expRef)}>Experience</button>
       </div>
 
       {/* =========================
-          HEADER: FOTO + NAMA + HEADLINE
+          HEADER: FOTO + NAMA
       ============================ */}
       <div className="profile-header">
-
-        {/* FOTO PROFIL */}
         <img 
           src="/photo-profile.jpeg"  
           alt={profile.full_name} 
           className="profile-photo" 
         />
-
-        {/* NAMA + HEADLINE */}
         <div className="profile-title">
           <h1>{profile.full_name}</h1>
           <h3>{profile.headline}</h3>
@@ -39,14 +35,11 @@ export default function Profile({ profile, contact, onNavigate, refs }) {
           BODY: ABOUT, PROFILE, CONTACT
       ============================ */}
       <div className="profile-body">
-
-        {/* ABOUT ME */}
         <div className="profile-section glow">
           <h2>ABOUT ME</h2>
           <p>{profile.short_bio}</p>
         </div>
 
-        {/* DETAIL PROFILE */}
         <div className="profile-section glow">
           <h2>PROFILE</h2>
           <p><strong>NIM:</strong> {profile.nim}</p>
@@ -55,19 +48,11 @@ export default function Profile({ profile, contact, onNavigate, refs }) {
           <p><strong>Lokasi:</strong> {profile.location}</p>
           {profile.portfolio_url && (
             <p>
-              <a 
-                href={profile.portfolio_url} 
-                target="_blank" 
-                rel="noreferrer"
-                className="portfolio-btn"
-              >
-                🌐 View My Portfolio
-              </a>
+              <a href={profile.portfolio_url} target="_blank" rel="noreferrer" className="portfolio-btn">Portfolio</a>
             </p>
           )}
         </div>
 
-        {/* CONTACT / SOSMED */}
         <div className="profile-section glow">
           <h2>CONTACT</h2>
           <div className="social-links-new">
@@ -81,7 +66,6 @@ export default function Profile({ profile, contact, onNavigate, refs }) {
             {contacts.linkedin && <a href={contacts.linkedin}><FaLinkedin /> LinkedIn</a>}
           </div>
         </div>
-
       </div>
     </section>
   );

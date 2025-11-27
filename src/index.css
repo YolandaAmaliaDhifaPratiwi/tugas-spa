@@ -1,16 +1,15 @@
 /* ============================
-   GLOBAL VARIABLES
+   GLOBAL
 ============================ */
 :root {
   --bg: #f7fafc;
   --card: #fff;
   --muted: #6b7280;
-  --glow: rgba(0,153,255,0.3); /* glow effect */
+
+  /* WARNA GLOW GLOBAL — seragam */
+  --glow: rgba(0,153,255,0.4);
 }
 
-/* ============================
-   GLOBAL RESET
-============================ */
 body {
   font-family: Inter, system-ui, Arial;
   background: var(--bg);
@@ -43,37 +42,15 @@ body {
   margin-bottom: 20px;
 }
 
-/* MINI NAVIGATION DI ATAS */
-.profile-nav-top {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 16px;
-}
-
-.profile-nav-top button {
-  padding: 6px 14px;
-  border: none;
-  border-radius: 6px;
-  background: #dbeafe;   /* soft blue */
-  color: #1e40af;
-  cursor: pointer;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.profile-nav-top button:hover {
-  background: #eff6ff;
-  transform: translateY(-1px);
-}
-
-/* HEADER FOTO + NAMA */
+/* HEADER FOTO PROFIL + GRADIEN */
 .profile-header {
   display: flex;
   gap: 20px;
   align-items: center;
   padding: 25px;
-  background: linear-gradient(to right, #ffd6e7, #d6e5ff); /* soft pastel */
+  background: linear-gradient(to right, #ffd6e7, #d6e5ff);
+  border-radius: 12px 12px 0 0;
+  position: relative;
 }
 
 .profile-photo {
@@ -94,6 +71,32 @@ body {
   margin: 6px 0 0;
   color: #333;
   font-weight: 500;
+}
+
+/* ============================
+   NAVBAR MINI DI ATAS HEADER FOTO
+============================ */
+.profile-nav-top {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.profile-nav-top button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(to right, #ffd6e7, #d6e5ff);
+  color: #1e3a8a;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.profile-nav-top button:hover {
+  background: linear-gradient(to right, #ffe0ec, #e0e5ff);
+  transform: translateY(-1px);
 }
 
 /* ============================
@@ -128,7 +131,7 @@ body {
 }
 
 /* ============================
-   CONTACT BUTTONS
+   CONTACT / SOSMED
 ============================ */
 .social-links-new {
   display: flex;
@@ -147,11 +150,30 @@ body {
   align-items: center;
   gap: 10px;
   color: #1e3a8a;
-  transition: 0.25s;
 }
 
 .social-links-new a:hover {
   background: #dbe3ff;
+}
+
+/* ============================
+   PORTFOLIO BUTTON
+============================ */
+.portfolio-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: linear-gradient(to right, #ffd6e7, #d6e5ff);
+  color: #1e3a8a;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  margin-top: 8px;
+}
+
+.portfolio-btn:hover {
+  background: linear-gradient(to right, #ffe0ec, #e0e5ff);
+  transform: translateY(-2px);
 }
 
 /* ============================
@@ -194,15 +216,6 @@ body {
 .skill-meta {
   font-size: 13px;
   color: var(--muted);
-}
-
-.badge {
-  background: #d1fae5;
-  color: #065f46;
-  padding: 2px 6px;
-  border-radius: 6px;
-  font-size: 11px;
-  font-weight: 600;
 }
 
 /* ============================
@@ -293,7 +306,7 @@ body {
 }
 
 /* ============================
-   GLOW CLASS
+   GLOBAL GLOW CLASS
 ============================ */
 .glow {
   transition: 0.3s ease;
@@ -317,24 +330,9 @@ body {
     width: 130px;
     height: 130px;
   }
-}
 
-/* ============================
-   PORTFOLIO BUTTON
-============================ */
-.portfolio-btn {
-  display: inline-block;
-  padding: 8px 16px;
-  background: #dbeafe; /* biru sangat muda / soft pastel */
-  color: #1e40af;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-  margin-top: 8px;
-}
-
-.portfolio-btn:hover {
-  background: #eff6ff;
-  transform: translateY(-2px);
+  .profile-nav-top {
+    flex-direction: column;
+    gap: 6px;
+  }
 }

@@ -152,7 +152,7 @@ body {
    MINI NAVIGATION GLOBAL (KANAN ATAS - FIXED DI HP)
 =========================== */
 .profile-nav-global {
-  position: fixed; /* Global: Fixed by default for smaller screens */
+  position: fixed; /* DEFAULT: Fixed untuk layar kecil */
   top: 20px;
   right: 20px;
   display: flex;
@@ -212,6 +212,7 @@ body {
     margin-left: auto; 
   }
 }
+
 /* ============================
    SKILLS
 =========================== */
@@ -223,7 +224,6 @@ body {
   margin: 0;
   list-style: none;
 }
-/* ... sisa kode CSS Anda ... */
 
 .skill-item {
   display: flex;

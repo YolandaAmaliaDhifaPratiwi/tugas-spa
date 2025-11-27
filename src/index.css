@@ -195,28 +195,20 @@ body {
   }
 }
 
-
-/* ... */
-/* ============================
-   LAPTOP / DESKTOP ADJUSTMENTS
-=========================== */
 /* ============================
    LAPTOP / DESKTOP ADJUSTMENTS
 =========================== */
 @media (min-width: 1024px) {
-  .profile-nav-global {
-    /* Hapus properti 'fixed' agar elemen berada di dalam 'profile-header' */
-    position: static; 
-    
-    /* Nonaktifkan semua posisi yang terkait dengan fixed */
-    top: unset;
-    right: unset;
-    left: unset;
-    
-    /* Atur agar navigasi muncul di sebelah kanan */
-    margin-left: auto; /* Menggeser grup tombol ke kanan */
-  }
+  .profile-nav-global {
+    position: static; /* Hapus fixed */
+    right: auto;
+    left: 0;
+    top: 0;
+    margin-left: 3cm; /* Gunakan margin untuk jarak dari kiri */
+    /* Anda mungkin perlu memindahkannya ke dalam profile-header di HTML */
+  }
 }
+
 /* ============================
    SKILLS
 =========================== */
@@ -367,4 +359,3 @@ body {
   box-shadow: 0 0 15px var(--glow);
   transform: translateY(-3px);
 }
-

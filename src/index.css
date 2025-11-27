@@ -41,7 +41,7 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   overflow: hidden;
   margin-bottom: 20px;
-  position: relative; /* untuk mini nav tombol di dalam card */
+  position: relative;
 }
 
 .profile-header {
@@ -331,9 +331,34 @@ body {
 }
 
 /* ============================
-   RESPONSIVE HP
+   RESPONSIVE HP (SAFE)
 =========================== */
-/* Media query HP dihapus agar tampilan HP sama seperti desktop */
+@media (max-width: 700px) {
+  .profile-header {
+    flex-direction: column; /* foto di atas, nama di bawah */
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 130px;
+    height: 130px;
+  }
+
+  .profile-nav {
+    position: relative; /* ikut flow card, tidak absolute */
+    top: auto;
+    right: auto;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  .profile-nav button {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+}
 
 /* ============================
    LAPTOP / DESKTOP ADJUSTMENTS

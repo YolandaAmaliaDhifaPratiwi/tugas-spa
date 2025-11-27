@@ -149,10 +149,10 @@ body {
 }
 
 /* ============================
-   MINI NAVIGATION GLOBAL (KANAN ATAS - FIXED DI HP)
+   MINI NAVIGATION GLOBAL (KANAN ATAS)
 =========================== */
 .profile-nav-global {
-  position: fixed; /* DEFAULT: Fixed untuk layar kecil */
+  position: fixed;
   top: 20px;
   right: 20px;
   display: flex;
@@ -180,13 +180,13 @@ body {
 }
 
 /* ============================
-   RESPONSIVE HP (KEEPING IT FIXED)
+   RESPONSIVE HP
 =========================== */
 @media (max-width: 700px) {
   .profile-nav-global {
     top: 10px;
     right: 10px;
-    flex-direction: row;
+    flex-direction: row; /* tetap horizontal di HP */
   }
 
   .profile-nav-global button {
@@ -195,24 +195,28 @@ body {
   }
 }
 
+
+/* ... */
 /* ============================
-   LAPTOP / DESKTOP ADJUSTMENTS (IN-FLOW NAVIGATION)
+   LAPTOP / DESKTOP ADJUSTMENTS
+=========================== */
+/* ============================
+   LAPTOP / DESKTOP ADJUSTMENTS
 =========================== */
 @media (min-width: 1024px) {
   .profile-nav-global {
-    /* PENTING: Mengubah posisi dari fixed ke static/in-flow */
+    /* Hapus properti 'fixed' agar elemen berada di dalam 'profile-header' */
     position: static; 
     
-    /* Hapus semua properti yang terkait dengan position: fixed */
+    /* Nonaktifkan semua posisi yang terkait dengan fixed */
     top: unset;
     right: unset;
     left: unset;
     
-    /* Dorong elemen ke kanan di dalam flex container (.profile-header) */
-    margin-left: auto; 
+    /* Atur agar navigasi muncul di sebelah kanan */
+    margin-left: auto; /* Menggeser grup tombol ke kanan */
   }
 }
-
 /* ============================
    SKILLS
 =========================== */
@@ -363,3 +367,4 @@ body {
   box-shadow: 0 0 15px var(--glow);
   transform: translateY(-3px);
 }
+

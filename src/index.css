@@ -73,12 +73,17 @@ body {
 }
 
 /* ============================
-   MINI NAVIGATION DI PROFILE CARD
-=========================== */
+   MINI NAVIGATION INSIDE PROFILE
+============================ */
+
+.profile-header {
+  position: relative;
+}
+
 .profile-nav {
   position: absolute;
-  top: 15px;
-  right: 15px; /* tetap di kanan dalam card */
+  top: 18px;
+  right: 22px;
   display: flex;
   gap: 8px;
 }
@@ -86,11 +91,11 @@ body {
 .profile-nav button {
   background: linear-gradient(to right, #ffd6e7, #d6e5ff);
   border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   transition: 0.25s ease;
 }
 
@@ -98,6 +103,25 @@ body {
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(0,153,255,0.4);
 }
+
+
+.portfolio-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #dbeafe; /* biru sangat muda / soft pastel */
+  color: #1e40af;      /* teks biru sedang untuk kontras tapi tetap soft */
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  margin-top: 8px;
+}
+
+.portfolio-btn:hover {
+  background: #eff6ff; /* hover lebih terang lagi tapi tetap soft */
+  transform: translateY(-2px);
+}
+
 
 /* ============================
    BODY GRID
@@ -365,3 +389,4 @@ body {
     flex-direction: column;
   }
 }
+

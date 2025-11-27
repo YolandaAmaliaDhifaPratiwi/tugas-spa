@@ -1,0 +1,116 @@
+{
+  "id": 12,
+  "slug": "yolanda-amalia-dhifa-pratiwi-l200234096",
+
+  "profile": {
+    "full_name": "Yolanda Amalia Dhifa Pratiwi",
+    "nim": "L200234096",
+    "prodi": "Informatics Engineering",
+    "angkatan": "2023",
+    "photo_url": "https://github.com/tif1336/single-page-application-using-reactjs-to-display-student-cv-YolandaAmaliaDhifaPratiwi/blob/main/photo-profile.jpeg?raw=true",
+    "headline": "Visual Designer & Editing Enthusiast | Informatics Student",
+    "short_bio": "Mahasiswa UMS Informatika dengan minat pada fotografi, dan editing foto.",
+    "location": " Surakarta, Jawa Tengah",
+    "portfolio_url": "https://yolandaamaliadhifapratiwi.github.io/yolandaamaliadhifap/"
+  },
+
+  "contact": {
+    "email": "yolandaamalia299@gmail.com",
+    "phone": "+62895422583540",
+    "instagram": "https://www.instagram.com/dyaolfa?igsh=ejdkYXFwbGlkZmkz",
+    "linkedin": "https://www.linkedin.com/in/yolanda-amalia-dhifa-pratiwi-3ab4a8324",
+    "github": "https://github.com/YolandaAmaliaDhifaPratiwi"
+  },
+
+  "skills": [
+    {
+      "id": 1,
+      "name": "Lightroom",
+      "category": "editing",
+      "level": "advanced",
+      "is_main": true,
+      "years_of_experience": 3,
+      "icon_url": "https://logo.svgcdn.com/logos/adobe-lightroom.svg"
+    },
+    {
+      "id": 2,
+      "name": "PicsArt",
+      "category": "editing",
+      "level": "advanced",
+      "is_main": true,
+      "years_of_experience": 3,
+      "icon_url": "https://images.seeklogo.com/logo-png/37/1/picsart-logo-png_seeklogo-378855.png"
+    },
+    {
+      "id": 3,
+      "name": "Snapseed",
+      "category": "editing",
+      "level": "intermediate",
+      "is_main": false,
+      "years_of_experience": 2,
+      "icon_url": "https://static.cdnlogo.com/logos/s/61/snapseed.svg"
+    },
+    {
+      "id": 4,
+      "name": "Canva",
+      "category": "design",
+      "level": "advanced",
+      "is_main": true,
+      "years_of_experience": 3,
+      "icon_url": "https://images.seeklogo.com/logo-png/43/1/canva-logo-png_seeklogo-438258.png"
+   },
+   {
+      "id": 5,
+      "name": "Photoshop",
+      "category": "editing",
+      "level": "intermediate",
+      "is_main": false,
+      "years_of_experience": 1,
+      "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg"
+    }
+  ],
+
+  "experiences": [
+    {
+      "id": 101,
+      "title": "Visual Designer / Content Uploader",
+      "organization": "UKM / Komunitas Kampus",
+      "experience_type": "organization",
+      "start_date": "2023-01-01",
+      "end_date": "2024-12-31",
+      "is_current": false,
+      "description": "Membuat, dan menata hasil desain visual untuk feed resmi Instagram, memastikan tampilan konten rapi dan menarik.",
+      "technologies": ["Lightroom", "PicsArt", "Snapseed", "Canva", "Photoshop"],
+      "image_url": "https://i.imgur.com/smhSqAe.jpeg"
+    },
+    {
+      "id": 102,
+      "title": "Achievements / Participation",
+      "organization": "Participation",
+      "experience_type": "achievement",
+      "start_date": "2025-11-10",
+      "end_date": "2025-11-20",
+      "is_current": false,
+      "description": "Ikut Lomba Editing Foto — Partisipasi",
+      "technologies": ["Lightroom", "PicsArt", "Snapseed", "Photoshop"],
+      "image_url": "https://i.imgur.com/4IMwDaS.jpeg"
+    }, 
+    {
+      "id": 103,
+      "title": "Participation",
+      "organization": "UKM / Komunitas Kampus",
+      "experience_type": "organization",
+      "start_date": "2025-11-25",
+      "end_date": "2025-11-30",
+      "is_current": false,
+      "description": "Ikut Pameran Karya Mahasiswa — Partisipasi",
+      "technologies": ["Lightroom", "PicsArt"],
+      "image_url": "https://i.imgur.com/4vbRYuX.jpeg"
+    }
+  ],
+
+  "statistics": {
+      "views_count": 127,
+      "profile_complete_percent": 92
+  }
+}

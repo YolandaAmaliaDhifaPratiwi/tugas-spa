@@ -5,8 +5,6 @@
   --bg: #f7fafc;
   --card: #fff;
   --muted: #6b7280;
-
-  /* WARNA GLOW GLOBAL — seragam */
   --glow: rgba(0,153,255,0.4);
 }
 
@@ -42,14 +40,12 @@ body {
   margin-bottom: 20px;
 }
 
-/* HEADER FOTO PROFIL + GRADIEN */
 .profile-header {
   display: flex;
   gap: 20px;
   align-items: center;
   padding: 25px;
   background: linear-gradient(to right, #ffd6e7, #d6e5ff);
-  border-radius: 12px 12px 0 0;
   position: relative;
 }
 
@@ -71,32 +67,6 @@ body {
   margin: 6px 0 0;
   color: #333;
   font-weight: 500;
-}
-
-/* ============================
-   NAVBAR MINI DI ATAS HEADER FOTO
-============================ */
-.profile-nav-top {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-bottom: 15px;
-}
-
-.profile-nav-top button {
-  padding: 6px 14px;
-  border: none;
-  border-radius: 6px;
-  background: linear-gradient(to right, #ffd6e7, #d6e5ff);
-  color: #1e3a8a;
-  cursor: pointer;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.profile-nav-top button:hover {
-  background: linear-gradient(to right, #ffe0ec, #e0e5ff);
-  transform: translateY(-1px);
 }
 
 /* ============================
@@ -131,7 +101,7 @@ body {
 }
 
 /* ============================
-   CONTACT / SOSMED
+   CONTACT BUTTONS
 ============================ */
 .social-links-new {
   display: flex;
@@ -142,38 +112,18 @@ body {
 .social-links-new a {
   text-decoration: none;
   font-size: 14px;
-  background: #eef2ff;
+  background: #ffd6e7;
   padding: 10px 12px;
   border-radius: 6px;
-  border: 1px solid #c7d2fe;
+  border: 1px solid #d6e5ff;
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #1e3a8a;
+  color: #7b2cbf;
 }
 
 .social-links-new a:hover {
-  background: #dbe3ff;
-}
-
-/* ============================
-   PORTFOLIO BUTTON
-============================ */
-.portfolio-btn {
-  display: inline-block;
-  padding: 8px 16px;
-  background: linear-gradient(to right, #ffd6e7, #d6e5ff);
-  color: #1e3a8a;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-  margin-top: 8px;
-}
-
-.portfolio-btn:hover {
-  background: linear-gradient(to right, #ffe0ec, #e0e5ff);
-  transform: translateY(-2px);
+  background: #f0d9f8;
 }
 
 /* ============================
@@ -216,6 +166,15 @@ body {
 .skill-meta {
   font-size: 13px;
   color: var(--muted);
+}
+
+.badge {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
 }
 
 /* ============================
@@ -331,8 +290,61 @@ body {
     height: 130px;
   }
 
-  .profile-nav-top {
-    flex-direction: column;
-    gap: 6px;
+  .profile-nav {
+    top: 10px;
+    right: 10px;
+    flex-direction: row;
   }
+
+  .profile-nav button {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+}
+
+/* ============================
+   MINI NAVIGATION BUTTONS
+============================ */
+.profile-nav {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.profile-nav button {
+  background: linear-gradient(to right, #ffd6e7, #d6e5ff);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+.profile-nav button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0,153,255,0.4);
+}
+
+/* ============================
+   PORTFOLIO BUTTON
+============================ */
+.portfolio-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: linear-gradient(to right, #ffd6e7, #d6e5ff);
+  color: #7b2cbf;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  margin-top: 8px;
+}
+
+.portfolio-btn:hover {
+  background: #f0d9f8;
+  transform: translateY(-2px);
 }

@@ -8,20 +8,22 @@ export default function Profile({ profile, contact, onNavigate, refs }) {
     <section id="profile" className="profile-wrapper glow">
 
       {/* =========================
-          HEADER: PHOTO + TITLE + NAV
+          MINI NAVIGATION DI ATAS
+      ============================ */}
+      <div className="profile-nav-top">
+        <button onClick={() => onNavigate(refs.profileRef)}>Profile</button>
+        <button onClick={() => onNavigate(refs.skillsRef)}>Skills</button>
+        <button onClick={() => onNavigate(refs.expRef)}>Experience</button>
+      </div>
+
+      {/* =========================
+          HEADER: FOTO + NAMA + HEADLINE
       ============================ */}
       <div className="profile-header">
 
-        {/* 🔗 MINI NAVIGATION */}
-        <div className="profile-nav">
-          <button onClick={() => onNavigate(refs.profileRef)}>Profile</button>
-          <button onClick={() => onNavigate(refs.skillsRef)}>Skills</button>
-          <button onClick={() => onNavigate(refs.expRef)}>Experience</button>
-        </div>
-
         {/* FOTO PROFIL */}
         <img 
-          src="/photo-profile.jpeg"  // dari folder public/
+          src="/photo-profile.jpeg"  
           alt={profile.full_name} 
           className="profile-photo" 
         />
@@ -51,8 +53,6 @@ export default function Profile({ profile, contact, onNavigate, refs }) {
           <p><strong>Program:</strong> {profile.prodi}</p>
           <p><strong>Angkatan:</strong> {profile.angkatan}</p>
           <p><strong>Lokasi:</strong> {profile.location}</p>
-
-          {/* PORTFOLIO BUTTON */}
           {profile.portfolio_url && (
             <p>
               <a 
@@ -61,7 +61,7 @@ export default function Profile({ profile, contact, onNavigate, refs }) {
                 rel="noreferrer"
                 className="portfolio-btn"
               >
-                🥰 View My Portfolio
+                🌐 View My Portfolio
               </a>
             </p>
           )}

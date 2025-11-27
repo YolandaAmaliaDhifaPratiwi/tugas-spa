@@ -201,11 +201,14 @@ body {
    LAPTOP / DESKTOP ADJUSTMENTS
 =========================== */
 @media (min-width: 1024px) {
-  .profile-nav-global {
-    right: 5px; /* Menonaktifkan 'right: 20px' */
-    left: 3cm;   /* Mengatur posisi 5cm dari kiri */
-    /* top: 20px; tidak perlu diulang karena sudah di global*/
-  }
+  .profile-nav-global {
+    position: static; /* Hapus fixed */
+    right: auto;
+    left: 0;
+    top: 0;
+    margin-left: 3cm; /* Gunakan margin untuk jarak dari kiri */
+    /* Anda mungkin perlu memindahkannya ke dalam profile-header di HTML */
+  }
 }
 /* ============================
    SKILLS
@@ -357,6 +360,7 @@ body {
   box-shadow: 0 0 15px var(--glow);
   transform: translateY(-3px);
 }
+
 
 
 

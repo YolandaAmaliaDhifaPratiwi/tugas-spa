@@ -16,13 +16,15 @@ export default function App() {
 
   return (
     <div className="container">
+      {/* GLOBAL NAV FIXED DI KANAN ATAS */}
+      <div className="profile-nav-global">
+        <button onClick={() => scrollToSection(profileRef)}>Profile</button>
+        <button onClick={() => scrollToSection(skillsRef)}>Skills</button>
+        <button onClick={() => scrollToSection(expRef)}>Experience</button>
+      </div>
+
       <section ref={profileRef}>
-        <Profile 
-          profile={data.profile} 
-          contact={data.contact} 
-          onNavigate={scrollToSection}
-          refs={{ profileRef, skillsRef, expRef }}
-        />
+        <Profile profile={data.profile} contact={data.contact} />
       </section>
 
       <section ref={skillsRef}>

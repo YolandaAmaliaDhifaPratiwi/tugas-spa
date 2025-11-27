@@ -277,33 +277,7 @@ body {
 }
 
 /* ============================
-   RESPONSIVE
-============================ */
-@media (max-width: 700px) {
-  .profile-header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .profile-photo {
-    width: 130px;
-    height: 130px;
-  }
-
-  .profile-nav {
-    top: 10px;
-    right: 10px;
-    flex-direction: row;
-  }
-
-  .profile-nav button {
-    padding: 5px 10px;
-    font-size: 11px;
-  }
-}
-
-/* ============================
-   MINI NAVIGATION BUTTONS
+   MINI NAVIGATION BUTTONS DI KANAN ATAS
 ============================ */
 .profile-nav {
   position: absolute;
@@ -347,4 +321,30 @@ body {
 .portfolio-btn:hover {
   background: #f0d9f8;
   transform: translateY(-2px);
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 700px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 130px;
+    height: 130px;
+  }
+
+  .profile-nav {
+    top: 10px;
+    right: 10px;
+    flex-direction: row;
+  }
+
+  .profile-nav button {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
 }

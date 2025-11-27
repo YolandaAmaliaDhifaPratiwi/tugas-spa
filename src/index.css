@@ -41,7 +41,6 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   overflow: hidden;
   margin-bottom: 20px;
-  position: relative; /* untuk mini nav tombol di dalam card */
 }
 
 .profile-header {
@@ -70,33 +69,6 @@ body {
   margin: 6px 0 0;
   color: #333;
   font-weight: 500;
-}
-
-/* ============================
-   MINI NAVIGATION DI PROFILE CARD
-=========================== */
-.profile-nav {
-  position: absolute;
-  top: 15px;
-  right: 15px; /* tetap di kanan dalam card */
-  display: flex;
-  gap: 8px;
-}
-
-.profile-nav button {
-  background: linear-gradient(to right, #ffd6e7, #d6e5ff);
-  border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: 500;
-  transition: 0.25s ease;
-}
-
-.profile-nav button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0,153,255,0.4);
 }
 
 /* ============================
@@ -142,18 +114,18 @@ body {
 .social-links-new a {
   text-decoration: none;
   font-size: 14px;
-  background: #ffd6e7;
+  background: #eef2ff;
   padding: 10px 12px;
   border-radius: 6px;
-  border: 1px solid #d6e5ff;
+  border: 1px solid #c7d2fe;
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #7b2cbf;
+  color: #1e3a8a;
 }
 
 .social-links-new a:hover {
-  background: #f0d9f8;
+  background: #dbe3ff;
 }
 
 /* ============================
@@ -174,6 +146,63 @@ body {
 .portfolio-btn:hover {
   background: linear-gradient(to right, #ffe0f0, #e0e4ff);
   transform: translateY(-2px);
+}
+
+/* ============================
+   MINI NAVIGATION GLOBAL (KANAN ATAS)
+=========================== */
+.profile-nav-global {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 999;
+  flex-direction: row; /* default horizontal */
+}
+
+.profile-nav-global button {
+  background: linear-gradient(to right, #ffd6e7, #d6e5ff);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #7b2cbf;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: 0.25s ease;
+}
+
+.profile-nav-global button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,153,255,0.4);
+}
+
+/* ============================
+   RESPONSIVE HP
+=========================== */
+@media (max-width: 700px) {
+  .profile-nav-global {
+    top: 10px;
+    right: 10px;
+    flex-direction: row; /* tetap horizontal di HP */
+  }
+
+  .profile-nav-global button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+/* ============================
+   LAPTOP / DESKTOP ADJUSTMENTS
+=========================== */
+@media (min-width: 1024px) {
+  .profile-nav-global {
+    right: auto; /* hapus posisi dari kanan */
+    left: 5cm;   /* geser 5cm dari kiri */
+  }
 }
 
 /* ============================
@@ -302,7 +331,7 @@ body {
 
 .exp-image {
   width: 100%;
-  max-width: 200px; /* batasi ukuran gambar */
+  max-width: 200px;
   height: auto;
   border-radius: 8px;
   cursor: pointer;
@@ -327,41 +356,3 @@ body {
   transform: translateY(-3px);
 }
 
-/* ============================
-   RESPONSIVE HP
-=========================== */
-@media (max-width: 700px) {
-  .profile-header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .profile-photo {
-    width: 130px;
-    height: 130px;
-  }
-
-  .profile-nav {
-    position: static; /* ikut flow card */
-    justify-content: center;
-    margin-top: 10px;
-    flex-direction: row;
-  }
-
-  .profile-nav button {
-    padding: 5px 10px;
-    font-size: 11px;
-  }
-}
-
-/* ============================
-   LAPTOP / DESKTOP ADJUSTMENTS
-=========================== */
-@media (min-width: 1024px) {
-  .profile-nav {
-    position: absolute;
-    top: 15px;
-    right: 15px; /* tetap di kanan dalam card */
-    flex-direction: column;
-  }
-}

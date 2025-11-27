@@ -180,7 +180,7 @@ body {
 }
 
 /* ============================
-   RESPONSIVE
+   RESPONSIVE HP
 =========================== */
 @media (max-width: 700px) {
   .profile-nav-global {
@@ -195,6 +195,15 @@ body {
   }
 }
 
+/* ============================
+   LAPTOP / DESKTOP ADJUSTMENTS
+=========================== */
+@media (min-width: 1024px) {
+  .profile-nav-global {
+    right: auto; /* hapus posisi dari kanan */
+    left: 5cm;   /* geser 5cm dari kiri */
+  }
+}
 
 /* ============================
    SKILLS
@@ -346,4 +355,3 @@ body {
   box-shadow: 0 0 15px var(--glow);
   transform: translateY(-3px);
 }
-

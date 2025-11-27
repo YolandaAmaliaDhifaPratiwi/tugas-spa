@@ -367,7 +367,7 @@ body {
 
   .profile-nav {
     position: static; /* ikut flow card */
-    justify-content: center;
+    justify-content: flex-end; /* dari center ke kanan */
     margin-top: 10px;
     flex-direction: row;
   }
@@ -377,6 +377,7 @@ body {
     font-size: 11px;
   }
 }
+
 
 /* ============================
    LAPTOP / DESKTOP ADJUSTMENTS
@@ -389,4 +390,5 @@ body {
     flex-direction: column;
   }
 }
+
 

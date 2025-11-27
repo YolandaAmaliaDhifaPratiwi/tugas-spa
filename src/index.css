@@ -387,8 +387,10 @@ body {
     position: absolute;
     top: 15px;
     right: 15px; /* tetap di kanan dalam card */
-    flex-direction: column;
+    flex-direction: row;
+     
   }
 }
+
 
 

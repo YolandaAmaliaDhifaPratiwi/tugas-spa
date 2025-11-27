@@ -8,23 +8,9 @@ export default function Profile({ profile, contact, onNavigate, refs }) {
     <section id="profile" className="profile-wrapper glow">
 
       {/* =========================
-          HEADER: PORTFOLIO BUTTON DI ATAS
+          HEADER: PHOTO + TITLE + NAV
       ============================ */}
       <div className="profile-header">
-
-        {/* ======= PORTFOLIO BUTTON DI ATAS ======= */}
-        {profile.portfolio_url && (
-          <p className="portfolio-btn-wrapper">
-            <a 
-              href={profile.portfolio_url} 
-              target="_blank" 
-              rel="noreferrer"
-              className="portfolio-btn"
-            >
-              🌐 View My Portfolio
-            </a>
-          </p>
-        )}
 
         {/* 🔗 MINI NAVIGATION */}
         <div className="profile-nav">
@@ -35,7 +21,7 @@ export default function Profile({ profile, contact, onNavigate, refs }) {
 
         {/* FOTO PROFIL */}
         <img 
-          src="/photo-profile.jpeg"
+          src="/photo-profile.jpeg"  // dari folder public/
           alt={profile.full_name} 
           className="profile-photo" 
         />
@@ -65,6 +51,20 @@ export default function Profile({ profile, contact, onNavigate, refs }) {
           <p><strong>Program:</strong> {profile.prodi}</p>
           <p><strong>Angkatan:</strong> {profile.angkatan}</p>
           <p><strong>Lokasi:</strong> {profile.location}</p>
+
+          {/* PORTFOLIO BUTTON */}
+          {profile.portfolio_url && (
+            <p>
+              <a 
+                href={profile.portfolio_url} 
+                target="_blank" 
+                rel="noreferrer"
+                className="portfolio-btn"
+              >
+                🥰 View My Portfolio
+              </a>
+            </p>
+          )}
         </div>
 
         {/* CONTACT / SOSMED */}

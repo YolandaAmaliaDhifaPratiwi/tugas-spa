@@ -50,6 +50,9 @@ body {
   align-items: center;
   padding: 25px;
   background: linear-gradient(to right, #ffd6e7, #d6e5ff);
+  position: relative;
+  flex-direction: row; /* default desktop */
+  text-align: left;
 }
 
 .profile-photo {
@@ -75,11 +78,6 @@ body {
 /* ============================
    MINI NAVIGATION INSIDE PROFILE
 ============================ */
-
-.profile-header {
-  position: relative;
-}
-
 .profile-nav {
   position: absolute;
   top: 18px;
@@ -104,12 +102,14 @@ body {
   box-shadow: 0 0 10px rgba(0,153,255,0.4);
 }
 
-
+/* ============================
+   PORTFOLIO BUTTON
+=========================== */
 .portfolio-btn {
   display: inline-block;
   padding: 8px 16px;
-  background: #dbeafe; /* biru sangat muda / soft pastel */
-  color: #1e40af;      /* teks biru sedang untuk kontras tapi tetap soft */
+  background: linear-gradient(to right, #ffd6e7, #d6e5ff);
+  color: #7b2cbf;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
@@ -118,10 +118,9 @@ body {
 }
 
 .portfolio-btn:hover {
-  background: #eff6ff; /* hover lebih terang lagi tapi tetap soft */
+  background: linear-gradient(to right, #ffe0f0, #e0e4ff);
   transform: translateY(-2px);
 }
-
 
 /* ============================
    BODY GRID
@@ -178,26 +177,6 @@ body {
 
 .social-links-new a:hover {
   background: #f0d9f8;
-}
-
-/* ============================
-   PORTFOLIO BUTTON
-=========================== */
-.portfolio-btn {
-  display: inline-block;
-  padding: 8px 16px;
-  background: linear-gradient(to right, #ffd6e7, #d6e5ff);
-  color: #7b2cbf;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-  margin-top: 8px;
-}
-
-.portfolio-btn:hover {
-  background: linear-gradient(to right, #ffe0f0, #e0e4ff);
-  transform: translateY(-2px);
 }
 
 /* ============================
@@ -326,7 +305,7 @@ body {
 
 .exp-image {
   width: 100%;
-  max-width: 200px; /* batasi ukuran gambar */
+  max-width: 200px;
   height: auto;
   border-radius: 8px;
   cursor: pointer;
@@ -354,30 +333,7 @@ body {
 /* ============================
    RESPONSIVE HP
 =========================== */
-@media (max-width: 700px) {
-  .profile-header {
-    flex-direction: row;
-    text-align: center;
-  }
-
-  .profile-photo {
-    width: 130px;
-    height: 130px;
-  }
-
-  .profile-nav {
-    position: static; /* ikut flow card */
-    justify-content: flex-end; /* dari center ke kanan */
-    margin-top: 10px;
-    flex-direction: row;
-  }
-
-  .profile-nav button {
-    padding: 5px 10px;
-    font-size: 11px;
-  }
-}
-
+/* Media query HP dihapus agar tampilan HP sama seperti desktop */
 
 /* ============================
    LAPTOP / DESKTOP ADJUSTMENTS
@@ -386,14 +342,12 @@ body {
   .profile-nav {
     position: absolute;
     top: 15px;
-    right: 15px; /* tetap di kanan dalam card */
+    right: 15px;
     flex-direction: row;
-   .profile-header {
-    flex-direction: column;
-    text-align: center;
+  }
+
+  .profile-header {
+    flex-direction: row;
+    text-align: left;
   }
 }
-
-
-
-

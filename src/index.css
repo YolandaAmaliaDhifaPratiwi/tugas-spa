@@ -1,369 +1,365 @@
 /* ============================
-   GLOBAL VARIABLES
+   GLOBAL VARIABLES
 =========================== */
 :root {
-  --bg: #f7fafc;
-  --card: #fff;
-  --muted: #6b7280;
-  --glow: rgba(0,153,255,0.4);
+  --bg: #f7fafc;
+  --card: #fff;
+  --muted: #6b7280;
+  --glow: rgba(0,153,255,0.4);
 }
 
 /* ============================
-   BODY GLOBAL
+   BODY GLOBAL
 =========================== */
 body {
-  font-family: Inter, system-ui, Arial;
-  background: var(--bg);
-  color: #111;
-  margin: 0;
-  padding: 20px;
+  font-family: Inter, system-ui, Arial;
+  background: var(--bg);
+  color: #111;
+  margin: 0;
+  padding: 20px;
 }
 
 .container {
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .card {
-  background: var(--card);
-  padding: 16px;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-  margin-bottom: 16px;
+  background: var(--card);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  margin-bottom: 16px;
 }
 
 /* ============================
-   PROFILE CARD
+   PROFILE CARD
 =========================== */
 .profile-wrapper {
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  overflow: hidden;
-  margin-bottom: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .profile-header {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  padding: 25px;
-  background: linear-gradient(to right, #ffd6e7, #d6e5ff);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 25px;
+  background: linear-gradient(to right, #ffd6e7, #d6e5ff);
 }
 
 .profile-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 12px;
-  object-fit: cover;
-  border: 3px solid #fff;
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid #fff;
 }
 
 .profile-title h1 {
-  font-size: 28px;
-  margin: 0;
-  font-weight: 700;
+  font-size: 28px;
+  margin: 0;
+  font-weight: 700;
 }
 
 .profile-title h3 {
-  margin: 6px 0 0;
-  color: #333;
-  font-weight: 500;
+  margin: 6px 0 0;
+  color: #333;
+  font-weight: 500;
 }
 
 /* ============================
-   BODY GRID
+   BODY GRID
 =========================== */
 .profile-body {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  background: #fafafa;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background: #fafafa;
 }
 
 .profile-section {
-  background: #fff;
-  padding: 18px;
-  border-radius: 10px;
-  border: 1px solid #e5e7eb;
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
 }
 
 .profile-section h2 {
-  margin: 0 0 10px;
-  font-size: 18px;
-  font-weight: 600;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 6px;
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 6px;
 }
 
 .profile-section p {
-  margin: 6px 0;
-  color: var(--muted);
+  margin: 6px 0;
+  color: var(--muted);
 }
 
 /* ============================
-   CONTACT BUTTONS
+   CONTACT BUTTONS
 =========================== */
 .social-links-new {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .social-links-new a {
-  text-decoration: none;
-  font-size: 14px;
-  background: #eef2ff;
-  padding: 10px 12px;
-  border-radius: 6px;
-  border: 1px solid #c7d2fe;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #1e3a8a;
+  text-decoration: none;
+  font-size: 14px;
+  background: #eef2ff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #c7d2fe;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1e3a8a;
 }
 
 .social-links-new a:hover {
-  background: #dbe3ff;
+  background: #dbe3ff;
 }
 
 /* ============================
-   PORTFOLIO BUTTON
+   PORTFOLIO BUTTON
 =========================== */
 .portfolio-btn {
-  display: inline-block;
-  padding: 8px 16px;
-  background: linear-gradient(to right, #ffd6e7, #d6e5ff);
-  color: #7b2cbf;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-  margin-top: 8px;
+  display: inline-block;
+  padding: 8px 16px;
+  background: linear-gradient(to right, #ffd6e7, #d6e5ff);
+  color: #7b2cbf;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  margin-top: 8px;
 }
 
 .portfolio-btn:hover {
-  background: linear-gradient(to right, #ffe0f0, #e0e4ff);
-  transform: translateY(-2px);
+  background: linear-gradient(to right, #ffe0f0, #e0e4ff);
+  transform: translateY(-2px);
 }
 
 /* ============================
-   MINI NAVIGATION GLOBAL (KANAN ATAS)
+   MINI NAVIGATION GLOBAL (KANAN ATAS - FIXED DI HP)
 =========================== */
 .profile-nav-global {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  gap: 10px;
-  z-index: 999;
-  flex-direction: row; /* default horizontal */
+  position: fixed; /* Global: Fixed by default for smaller screens */
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 999;
+  flex-direction: row; /* default horizontal */
 }
 
 .profile-nav-global button {
-  background: linear-gradient(to right, #ffd6e7, #d6e5ff);
-  border: none;
-  padding: 8px 14px;
-  border-radius: 25px;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  color: #7b2cbf;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: 0.25s ease;
+  background: linear-gradient(to right, #ffd6e7, #d6e5ff);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #7b2cbf;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: 0.25s ease;
 }
 
 .profile-nav-global button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255,153,255,0.4);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,153,255,0.4);
 }
 
 /* ============================
-   RESPONSIVE HP
+   RESPONSIVE HP (KEEPING IT FIXED)
 =========================== */
 @media (max-width: 700px) {
-  .profile-nav-global {
-    top: 10px;
-    right: 10px;
-    flex-direction: row; /* tetap horizontal di HP */
-  }
+  .profile-nav-global {
+    top: 10px;
+    right: 10px;
+    flex-direction: row;
+  }
 
-  .profile-nav-global button {
-    padding: 6px 10px;
-    font-size: 12px;
-  }
+  .profile-nav-global button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
 }
 
-
-/* ... */
 /* ============================
-   LAPTOP / DESKTOP ADJUSTMENTS
+   LAPTOP / DESKTOP ADJUSTMENTS (IN-FLOW NAVIGATION)
 =========================== */
 @media (min-width: 1024px) {
-  .profile-nav-global {
-    position: static; /* Hapus fixed */
-    right: auto;
-    left: 0;
-    top: 0;
-    margin-left: 3cm; /* Gunakan margin untuk jarak dari kiri */
-    /* Anda mungkin perlu memindahkannya ke dalam profile-header di HTML */
-  }
+  .profile-nav-global {
+    /* PENTING: Mengubah posisi dari fixed ke static/in-flow */
+    position: static; 
+    
+    /* Hapus semua properti yang terkait dengan position: fixed */
+    top: unset;
+    right: unset;
+    left: unset;
+    
+    /* Dorong elemen ke kanan di dalam flex container (.profile-header) */
+    margin-left: auto; 
+  }
 }
 /* ============================
-   SKILLS
+   SKILLS
 =========================== */
 .skills-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 12px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
+/* ... sisa kode CSS Anda ... */
 
 .skill-item {
-  display: flex;
-  align-items: center;
-  background: var(--bg);
-  padding: 10px 12px;
-  border-radius: 8px;
-  border: 1px solid #e5e7eb;
-  gap: 12px;
-  transition: 0.25s ease;
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  gap: 12px;
+  transition: 0.25s ease;
 }
 
 .skill-item:hover {
-  box-shadow: 0 0 15px var(--glow);
-  transform: translateY(-3px);
+  box-shadow: 0 0 15px var(--glow);
+  transform: translateY(-3px);
 }
 
 .skill-icon {
-  width: 36px;
-  height: 36px;
+  width: 36px;
+  height: 36px;
 }
 
 .skill-name {
-  font-weight: 600;
+  font-weight: 600;
 }
 
 .skill-meta {
-  font-size: 13px;
-  color: var(--muted);
+  font-size: 13px;
+  color: var(--muted);
 }
 
 .badge {
-  background: #d1fae5;
-  color: #065f46;
-  padding: 2px 6px;
-  border-radius: 6px;
-  font-size: 11px;
-  font-weight: 600;
+  background: #d1fae5;
+  color: #065f46;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
 }
 
 /* ============================
-   EXPERIENCES + TIMELINE
+   EXPERIENCES + TIMELINE
 =========================== */
 .experiences-list {
-  position: relative;
-  padding-left: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  position: relative;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .experiences-list::before {
-  content: "";
-  position: absolute;
-  left: 16px;
-  top: 0;
-  width: 4px;
-  height: 100%;
-  border-radius: 4px;
-  background: linear-gradient(to bottom, #ff6ba6, #7db7ff);
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(to bottom, #ff6ba6, #7db7ff);
 }
 
 .exp-item::before {
-  content: "";
-  position: absolute;
-  left: -28px;
-  top: 12px;
-  width: 14px;
-  height: 14px;
-  background: linear-gradient(to bottom, #ff6ba6, #7db7ff);
-  border-radius: 50%;
-  border: 3px solid white;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  content: "";
+  position: absolute;
+  left: -28px;
+  top: 12px;
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(to bottom, #ff6ba6, #7db7ff);
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 .exp-item {
-  padding: 16px;
-  border-radius: 12px;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  transition: 0.25s ease;
-  position: relative;
+  padding: 16px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  transition: 0.25s ease;
+  position: relative;
 }
 
 .exp-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 15px var(--glow);
-  border-color: #7db7ff;
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px var(--glow);
+  border-color: #7db7ff;
 }
 
 .exp-meta {
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 6px;
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 6px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .exp-item h4 {
-  margin: 0 0 6px;
-  font-size: 16px;
-  font-weight: 600;
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .exp-item small {
-  color: #777;
+  color: #777;
 }
 
 .exp-item p {
-  margin: 6px 0;
+  margin: 6px 0;
 }
 
 .exp-image {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
 }
 
 .exp-image:hover {
-  box-shadow: 0 0 20px rgba(255, 0, 128, 0.7);
-  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 0, 128, 0.7);
+  transform: scale(1.05);
 }
 
 /* ============================
-   GLOW & HOVER
+   GLOW & HOVER
 =========================== */
 .glow {
-  transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .glow:hover {
-  box-shadow: 0 0 15px var(--glow);
-  transform: translateY(-3px);
+  box-shadow: 0 0 15px var(--glow);
+  transform: translateY(-3px);
 }
-
-
-
-
-
-
-

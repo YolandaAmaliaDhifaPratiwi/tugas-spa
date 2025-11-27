@@ -195,16 +195,18 @@ body {
   }
 }
 
+
+/* ... */
 /* ============================
-   LAPTOP / DESKTOP ADJUSTMENTS
+   LAPTOP / DESKTOP ADJUSTMENTS
 =========================== */
 @media (min-width: 1024px) {
-  .profile-nav-global {
-    right: auto; /* hapus posisi dari kanan */
-    left: 5cm;   /* geser 5cm dari kiri */
-  }
+  .profile-nav-global {
+    right: auto; /* Menonaktifkan 'right: 20px' */
+    left: 5cm;   /* Mengatur posisi 5cm dari kiri */
+    /* top: 20px; tidak perlu diulang karena sudah di global*/
+  }
 }
-
 /* ============================
    SKILLS
 =========================== */
@@ -355,4 +357,5 @@ body {
   box-shadow: 0 0 15px var(--glow);
   transform: translateY(-3px);
 }
+
 

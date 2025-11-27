@@ -202,7 +202,7 @@ body {
 =========================== */
 @media (min-width: 1024px) {
   .profile-nav-global {
-    right: auto; /* Menonaktifkan 'right: 20px' */
+    right: 20px; /* Menonaktifkan 'right: 20px' */
     left: 3cm;   /* Mengatur posisi 5cm dari kiri */
     /* top: 20px; tidak perlu diulang karena sudah di global*/
   }
@@ -357,6 +357,7 @@ body {
   box-shadow: 0 0 15px var(--glow);
   transform: translateY(-3px);
 }
+
 
 
 

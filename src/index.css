@@ -376,26 +376,19 @@ body {
 }
 
 
-/* Tombol portfolio di atas */
-.portfolio-btn-wrapper {
-  text-align: center;
-  margin-bottom: 12px;
-}
-
 .portfolio-btn {
   display: inline-block;
   padding: 8px 16px;
-  background: #dbeafe; /* biru pastel lembut */
-  color: #1e40af;      
+  background: #dbeafe; /* biru sangat muda / soft pastel */
+  color: #1e40af;      /* teks biru sedang untuk kontras tapi tetap soft */
   border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s;
+  margin-top: 8px;
 }
 
 .portfolio-btn:hover {
-  background: #eff6ff; 
+  background: #eff6ff; /* hover lebih terang lagi tapi tetap soft */
   transform: translateY(-2px);
 }
-
-

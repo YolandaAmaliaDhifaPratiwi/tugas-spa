@@ -3,52 +3,35 @@ import { FaInstagram, FaWhatsapp, FaLinkedin, FaEnvelope } from "react-icons/fa"
 
 export default function Profile({ profile, contact, onNavigate, refs }) {
   const contacts = contact || {};
-  return (
-    <>
-      {/* HAPUS: MINI NAVIGATION GLOBAL di sini */}
 
-      <section id="profile" className="profile-wrapper glow">
+  return (
+    <section id="profile" className="profile-wrapper glow">
 
-        {/* HEADER: FOTO + NAMA */}
-        <div className="profile-header">
-          <img 
-            src="/photo-profile.jpeg"  // dari folder public/
-            alt={profile.full_name} 
-            className="profile-photo" 
-          />
-          <div className="profile-title">
-            <h1>{profile.full_name}</h1>
-            <h3>{profile.headline}</h3>
-          </div>
-          
-          {/* MASUKKAN MINI NAVIGATION GLOBAL DI SINI! */}
-          <div className="profile-nav-global">
-            <button onClick={() => onNavigate(refs.profileRef)}>Profile</button>
-            <button onClick={() => onNavigate(refs.skillsRef)}>Skills</button>
-            <button onClick={() => onNavigate(refs.expRef)}>Experience</button>
-          </div>
-
-        </div>
-
-        {/* FOTO PROFIL */}
+      {/* =========================
+          HEADER: PHOTO + TITLE
+      ============================ */}
+      <div className="profile-header">
         <img 
           src="/photo-profile.jpeg"  // dari folder public/
           alt={profile.full_name} 
           className="profile-photo" 
         />
 
-        {/* NAMA + HEADLINE */}
         <div className="profile-title">
           <h1>{profile.full_name}</h1>
           <h3>{profile.headline}</h3>
         </div>
+
+        {/* MINI NAVIGATION HANYA DI PROFILE */}
+        <div className="profile-nav">
+          <button onClick={() => onNavigate(refs.profileRef)}>Profile</button>
+          <button onClick={() => onNavigate(refs.skillsRef)}>Skills</button>
+          <button onClick={() => onNavigate(refs.expRef)}>Experience</button>
+        </div>
       </div>
 
-      {/* =========================
-          BODY: ABOUT, PROFILE, CONTACT
-      ============================ */}
+      {/* BODY */}
       <div className="profile-body">
-
         {/* ABOUT ME */}
         <div className="profile-section glow">
           <h2>ABOUT ME</h2>
@@ -62,23 +45,16 @@ export default function Profile({ profile, contact, onNavigate, refs }) {
           <p><strong>Program:</strong> {profile.prodi}</p>
           <p><strong>Angkatan:</strong> {profile.angkatan}</p>
           <p><strong>Lokasi:</strong> {profile.location}</p>
-
-          {/* PORTFOLIO BUTTON */}
           {profile.portfolio_url && (
             <p>
-              <a 
-                href={profile.portfolio_url} 
-                target="_blank" 
-                rel="noreferrer"
-                className="portfolio-btn"
-              >
-                🥰 View My Portfolio
+              <a href={profile.portfolio_url} className="portfolio-btn" target="_blank" rel="noreferrer">
+                My Portfolio
               </a>
             </p>
           )}
         </div>
 
-        {/* CONTACT / SOSMED */}
+        {/* CONTACT */}
         <div className="profile-section glow">
           <h2>CONTACT</h2>
           <div className="social-links-new">
@@ -92,9 +68,7 @@ export default function Profile({ profile, contact, onNavigate, refs }) {
             {contacts.linkedin && <a href={contacts.linkedin}><FaLinkedin /> LinkedIn</a>}
           </div>
         </div>
-
       </div>
     </section>
   );
 }
-

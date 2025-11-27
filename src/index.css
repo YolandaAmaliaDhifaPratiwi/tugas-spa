@@ -6,6 +6,10 @@
   --card: #fff;
   --muted: #6b7280;
   --glow: rgba(0,153,255,0.4);
+    /* Variabel baru untuk Soft Pink */
+    --soft-pink: #fbcfe8; /* Contoh warna pink muda */
+    --soft-pink-hover: #f9a8d4; /* Pink sedikit lebih gelap untuk hover */
+    --pink-text: #9d174d; /* Warna teks gelap yang cocok */
 }
 
 /* ============================
@@ -48,6 +52,7 @@ body {
   gap: 20px;
   align-items: center;
   padding: 25px;
+  /* Warna background header tetap: #ffd6e7 (pink muda) ke #d6e5ff (biru muda) */
   background: linear-gradient(to right, #ffd6e7, #d6e5ff);
 }
 
@@ -60,8 +65,8 @@ body {
 }
 
 .profile-title {
-    /* Perubahan Kunci: Mendorong elemen setelahnya (tombol) ke kanan */
-    margin-right: auto; 
+    /* Hapus margin-right: auto; jika sebelumnya ditambahkan */
+    margin-right: 0; 
 }
 
 .profile-title h1 {
@@ -154,62 +159,55 @@ body {
 }
 
 /* ============================
-   MINI NAVIGATION GLOBAL (SEBELUMNYA KANAN ATAS, SEKARANG DI DALAM HEADER)
+   MINI NAVIGATION GLOBAL (POJOK KANAN ATAS - Fixed & Soft Pink)
 =========================== */
-/* Kelas baru untuk menampung tombol di sebelah kanan */
-.profile-tabs {
-    display: flex;
-    gap: 10px;
-    align-self: flex-start; /* Agar tombol rata atas dengan teks profil */
-}
-
-.profile-tabs button {
-  background: linear-gradient(to right, #ffd6e7, #d6e5ff);
-  border: none;
-  padding: 8px 14px;
-  border-radius: 25px;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  color: #7b2cbf;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: 0.25s ease;
-}
-
-.profile-tabs button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255,153,255,0.4);
-}
-
-/* Menghapus/mengganti .profile-nav-global yang fixed karena sudah dipindah */
 .profile-nav-global {
-  /* Hapus semua properti fixed dan ubah menjadi kelas .profile-tabs */
-  /* Namun, untuk menjaga kompatibilitas, kita bisa membiarkannya kosong atau menghapusnya jika tidak digunakan di tempat lain */
-  display: none; /* Disembunyikan karena sudah dipindah ke .profile-tabs */
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 999;
+  flex-direction: row; 
+}
+
+.profile-nav-global button {
+    /* Perubahan Kunci: Warna Pink Muda Soft */
+  background: var(--soft-pink); 
+  border: none;
+  padding: 8px 14px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--pink-text); /* Teks warna yang cocok */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: 0.25s ease;
+}
+
+.profile-nav-global button:hover {
+  transform: scale(1.05);
+  /* Perubahan Kunci: Efek hover pink */
+  background: var(--soft-pink-hover); 
+  box-shadow: 0 0 15px rgba(251, 207, 232, 0.7); /* Glow pink muda */
+}
+
+/* Untuk kasus sebelumnya, jika Anda menggunakan kelas .profile-tabs di header, Anda bisa menyembunyikannya agar tidak bentrok */
+.profile-tabs {
+    display: none;
 }
 
 /* ============================
    RESPONSIVE HP
 =========================== */
 @media (max-width: 700px) {
-  .profile-header {
-      /* Di layar kecil, atur agar tombol bisa ke bawah jika ruang tidak cukup */
-      flex-wrap: wrap; 
-  }
-  
-  .profile-title {
-      /* Di layar kecil, hapus margin-right: auto agar tidak memakan semua ruang */
-      margin-right: 0; 
-  }
+  .profile-nav-global {
+    top: 10px;
+    right: 10px;
+    flex-direction: row; 
+  }
 
-  .profile-tabs {
-      /* Agar tombol navigasi tampil penuh di bawah nama/foto pada HP */
-      width: 100%;
-      justify-content: center;
-      margin-top: 10px;
-  }
-
-  .profile-tabs button {
+  .profile-nav-global button {
     padding: 6px 10px;
     font-size: 12px;
   }
@@ -219,12 +217,19 @@ body {
    LAPTOP / DESKTOP ADJUSTMENTS
 =========================== */
 @media (min-width: 1024px) {
-  /* Tidak perlu perubahan khusus di sini karena flexbox di .profile-header sudah bekerja */
+  /* Memastikan tombol tetap fixed dan tidak diubah oleh media query ini */
+  .profile-nav-global {
+    position: fixed; 
+    right: 20px;
+    top: 20px;
+    margin-left: 0;
+  }
 }
 
 /* ============================
-   SKILLS
+   SKILLS (dst...)
 =========================== */
+/* ... (Bagian CSS Skills, Experiences, Glow tetap sama) ... */
 .skills-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
